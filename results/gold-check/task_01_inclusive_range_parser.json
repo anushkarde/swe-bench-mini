@@ -1,0 +1,47 @@
+{
+  "baseline": {
+    "command": "python -m pytest tests/test_range_parser.py -q -k inclusive_upper_bound",
+    "duration_sec": 0.3246,
+    "exit_code": 1,
+    "stderr": "",
+    "stdout": "F                                                                        [100%]\n=================================== FAILURES ===================================\n___________________ test_inclusive_upper_bound_is_preserved ____________________\n\n    def test_inclusive_upper_bound_is_preserved() -> None:\n>       assert expand_numeric_range(\"2-4\") == [2, 3, 4]\nE       assert [2, 3] == [2, 3, 4]\nE         \nE         Right contains one more item: 4\nE         Use -v to get more diff\n\ntests/test_range_parser.py:9: AssertionError\n=========================== short test summary info ============================\nFAILED tests/test_range_parser.py::test_inclusive_upper_bound_is_preserved - ...\n1 failed, 2 deselected in 0.01s\n",
+    "timed_out": false
+  },
+  "baseline_command": "python -m pytest tests/test_range_parser.py -q -k inclusive_upper_bound",
+  "baseline_failed": true,
+  "candidate_test_command": "python -m pytest tests/test_range_parser.py -q -k inclusive_upper_bound",
+  "changed_files": [
+    "context/app/range_parser.py"
+  ],
+  "created_at": "2026-03-10T22:54:38.826691+00:00",
+  "error_type": null,
+  "forbidden_edit": false,
+  "full_suite": {
+    "command": "python -m pytest tests/test_range_parser.py -q",
+    "duration_sec": 0.2039,
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "...                                                                      [100%]\n3 passed in 0.00s\n",
+    "timed_out": false
+  },
+  "full_suite_passed": true,
+  "full_test_command": "python -m pytest tests/test_range_parser.py -q",
+  "patch_applied": true,
+  "patch_format": "unified_diff",
+  "resolved": true,
+  "result_path": "/Users/anushkade/Downloads/swe-bench-mini/results/gold-check/task_01_inclusive_range_parser.json",
+  "runtime_sec": 0.7406,
+  "setup": null,
+  "setup_command": "",
+  "system": "gold-check",
+  "targeted": {
+    "command": "python -m pytest tests/test_range_parser.py -q -k inclusive_upper_bound",
+    "duration_sec": 0.1908,
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ".                                                                        [100%]\n1 passed, 2 deselected in 0.00s\n",
+    "timed_out": false
+  },
+  "targeted_tests_passed": true,
+  "task_id": "task_01_inclusive_range_parser"
+}

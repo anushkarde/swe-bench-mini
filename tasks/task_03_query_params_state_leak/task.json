@@ -1,0 +1,22 @@
+{
+  "task_id": "task_03_query_params_state_leak",
+  "title": "Prevent query parameter state leakage",
+  "difficulty": "medium",
+  "tags": [
+    "python",
+    "mutable-defaults",
+    "state-management"
+  ],
+  "entry_point": "context/app/query_params.py",
+  "setup_command": "",
+  "baseline_fail_command": "python -m pytest tests/test_query_params.py -q -k repeated_calls_do_not_share_state",
+  "candidate_test_command": "python -m pytest tests/test_query_params.py -q -k repeated_calls_do_not_share_state",
+  "full_test_command": "python -m pytest tests/test_query_params.py -q",
+  "timeout_seconds": 30,
+  "forbidden_paths": [
+    "tests/**",
+    "gold/**",
+    "metadata.json",
+    "task.json"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "task_id": "task_02_optional_nickname_summary",
+  "title": "Handle optional nickname fields safely",
+  "difficulty": "easy",
+  "tags": [
+    "python",
+    "optional-fields",
+    "string-formatting"
+  ],
+  "entry_point": "context/app/profile_summary.py",
+  "setup_command": "",
+  "baseline_fail_command": "python -m pytest tests/test_profile_summary.py -q -k optional_nickname_none",
+  "candidate_test_command": "python -m pytest tests/test_profile_summary.py -q -k optional_nickname_none",
+  "full_test_command": "python -m pytest tests/test_profile_summary.py -q",
+  "timeout_seconds": 30,
+  "forbidden_paths": [
+    "tests/**",
+    "gold/**",
+    "metadata.json",
+    "task.json"
+  ]
+}

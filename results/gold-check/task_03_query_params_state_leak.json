@@ -1,0 +1,47 @@
+{
+  "baseline": {
+    "command": "python -m pytest tests/test_query_params.py -q -k repeated_calls_do_not_share_state",
+    "duration_sec": 0.3205,
+    "exit_code": 1,
+    "stderr": "",
+    "stdout": "F                                                                        [100%]\n=================================== FAILURES ===================================\n____________________ test_repeated_calls_do_not_share_state ____________________\n\n    def test_repeated_calls_do_not_share_state() -> None:\n        assert build_query_params(page=2) == {\"page\": \"2\"}\n>       assert build_query_params() == {\"page\": \"1\"}\nE       AssertionError: assert {'page': '2'} == {'page': '1'}\nE         \nE         Differing items:\nE         {'page': '2'} != {'page': '1'}\nE         Use -v to get more diff\n\ntests/test_query_params.py:8: AssertionError\n=========================== short test summary info ============================\nFAILED tests/test_query_params.py::test_repeated_calls_do_not_share_state - A...\n1 failed, 1 deselected in 0.01s\n",
+    "timed_out": false
+  },
+  "baseline_command": "python -m pytest tests/test_query_params.py -q -k repeated_calls_do_not_share_state",
+  "baseline_failed": true,
+  "candidate_test_command": "python -m pytest tests/test_query_params.py -q -k repeated_calls_do_not_share_state",
+  "changed_files": [
+    "context/app/query_params.py"
+  ],
+  "created_at": "2026-03-10T22:55:40.485835+00:00",
+  "error_type": null,
+  "forbidden_edit": false,
+  "full_suite": {
+    "command": "python -m pytest tests/test_query_params.py -q",
+    "duration_sec": 0.1972,
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "..                                                                       [100%]\n2 passed in 0.00s\n",
+    "timed_out": false
+  },
+  "full_suite_passed": true,
+  "full_test_command": "python -m pytest tests/test_query_params.py -q",
+  "patch_applied": true,
+  "patch_format": "unified_diff",
+  "resolved": true,
+  "result_path": "/Users/anushkade/Downloads/swe-bench-mini/results/gold-check/task_03_query_params_state_leak.json",
+  "runtime_sec": 0.725,
+  "setup": null,
+  "setup_command": "",
+  "system": "gold-check",
+  "targeted": {
+    "command": "python -m pytest tests/test_query_params.py -q -k repeated_calls_do_not_share_state",
+    "duration_sec": 0.1865,
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ".                                                                        [100%]\n1 passed, 1 deselected in 0.00s\n",
+    "timed_out": false
+  },
+  "targeted_tests_passed": true,
+  "task_id": "task_03_query_params_state_leak"
+}

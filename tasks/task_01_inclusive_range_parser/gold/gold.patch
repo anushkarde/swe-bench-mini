@@ -1,0 +1,13 @@
+diff --git a/context/app/range_parser.py b/context/app/range_parser.py
+index 9e90efb..b4b798a 100644
+--- a/context/app/range_parser.py
++++ b/context/app/range_parser.py
+@@ -13,7 +13,7 @@ def expand_numeric_range(token: str) -> list[int]:
+     if end < start:
+         raise ValueError("range end must be greater than or equal to start")
+ 
+-    return list(range(start, end))
++    return list(range(start, end + 1))
+ 
+ 
+ def parse_number_list(spec: str) -> list[int]:

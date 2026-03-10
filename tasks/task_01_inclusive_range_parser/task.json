@@ -1,0 +1,22 @@
+{
+  "task_id": "task_01_inclusive_range_parser",
+  "title": "Fix inclusive numeric range parsing",
+  "difficulty": "easy",
+  "tags": [
+    "python",
+    "parsing",
+    "off-by-one"
+  ],
+  "entry_point": "context/app/range_parser.py",
+  "setup_command": "",
+  "baseline_fail_command": "python -m pytest tests/test_range_parser.py -q -k inclusive_upper_bound",
+  "candidate_test_command": "python -m pytest tests/test_range_parser.py -q -k inclusive_upper_bound",
+  "full_test_command": "python -m pytest tests/test_range_parser.py -q",
+  "timeout_seconds": 30,
+  "forbidden_paths": [
+    "tests/**",
+    "gold/**",
+    "metadata.json",
+    "task.json"
+  ]
+}

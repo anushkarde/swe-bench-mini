@@ -1,0 +1,14 @@
+diff --git a/context/app/query_params.py b/context/app/query_params.py
+index 1897256..fd32a96 100644
+--- a/context/app/query_params.py
++++ b/context/app/query_params.py
+@@ -1,6 +1,6 @@
+ from __future__ import annotations
+ 
+ 
+-def build_query_params(page: int = 1, filters: dict[str, str] = {}) -> dict[str, str]:
+-    params = filters
++def build_query_params(page: int = 1, filters: dict[str, str] | None = None) -> dict[str, str]:
++    params = {} if filters is None else dict(filters)
+     params.setdefault("page", str(page))
+     return params

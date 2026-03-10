@@ -1,0 +1,7 @@
+{
+  "task_id": "task_01_inclusive_range_parser",
+  "pilot": true,
+  "language": "python",
+  "bug_class": "off_by_one",
+  "estimated_minutes": 5
+}

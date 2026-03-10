@@ -1,0 +1,7 @@
+{
+  "task_id": "task_03_query_params_state_leak",
+  "pilot": true,
+  "language": "python",
+  "bug_class": "mutable_default_argument",
+  "estimated_minutes": 8
+}

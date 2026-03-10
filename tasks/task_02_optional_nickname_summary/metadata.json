@@ -1,0 +1,7 @@
+{
+  "task_id": "task_02_optional_nickname_summary",
+  "pilot": true,
+  "language": "python",
+  "bug_class": "optional_null_handling",
+  "estimated_minutes": 5
+}
